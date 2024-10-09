@@ -60,7 +60,12 @@ def contains_char(word: str, letter: str) -> None:
     ):  # adds 1 to count depending on if the letter is found at this index
         count += 1
         print(letter, "found at index 4")
-    print(count, "instances of", letter, "found in", word)
+    if count == 1:
+        print(count, "instance of", letter, "found in", word)
+    elif count == 0:
+        print("No instances of", letter, "found in", word)
+    else:
+        print(count, "instances of", letter, "found in", word)
 
 
 def main() -> (
